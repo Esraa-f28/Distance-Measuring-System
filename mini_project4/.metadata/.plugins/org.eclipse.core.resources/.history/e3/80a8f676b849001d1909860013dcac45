@@ -1,0 +1,22 @@
+/******************************************************************************
+ *
+ * Description: measure distance using ultrasonic sensor
+ *
+ * Author: Esraa Fawzy
+ *
+ *******************************************************************************/
+#include"lcd.h"
+#include"ultrasonic.h"
+#include<avr/interrupt.h> // to enable I-bit
+#include<util/delay.h>
+
+int main(void)
+{
+	SREG|=(1<<7); // enabling I-bit
+	Ultrasonic_init();
+	LCD_init(); // initializing LCD
+	LCD_displayString("Distance= "); //displaying word "distance" on LCD
+	uint16 distance=0,preDistance=0;
+
+
+}
